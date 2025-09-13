@@ -1,0 +1,15 @@
+# Ultralytics-style dataset config (paths relative to repo root)
+# We will reference COCO JSON annotations for training/validation.
+
+path: .
+train: images  # train images directory
+val: images    # val images directory (we filter using splits/val.txt)
+
+# If you prefer per-split folders, you can create symlinks. We instead filter with lists.
+# Class names will be auto-read from annotations.json categories by the training script.
+
+names: []  # placeholder; will be filled/resolved from COCO categories at runtime
+annotations: annotations.json
+splits:
+  train: splits/train.txt
+  val: splits/val.txt

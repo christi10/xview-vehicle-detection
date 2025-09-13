@@ -1,0 +1,10 @@
+# Training hyperparameters and model choice
+model: yolov8n  # or yolov8s / yolo11n depending on your installed ultralytics version
+imgsz: 512
+epochs: 5
+batch: 16
+patience: 20
+lr0: 0.01
+weight_decay: 0.0005
+augment: true
+seed: 42

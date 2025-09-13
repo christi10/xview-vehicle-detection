@@ -1,0 +1,16 @@
+torch
+torchvision
+torchaudio
+ultralytics
+opencv-python
+matplotlib
+pycocotools
+tqdm
+typer
+rich
+pyyaml
+notebook
+jupyter
+ipykernel
+nbformat
+nbconvert

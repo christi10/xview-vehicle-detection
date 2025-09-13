@@ -1,0 +1,112 @@
+{
+  "results": [
+    {
+      "image_id": "xView_1132_1.tif",
+      "small_vehicle_count": 3,
+      "large_vehicle_count": 0
+    },
+    {
+      "image_id": "xView_1132_3.tif",
+      "small_vehicle_count": 33,
+      "large_vehicle_count": 0
+    },
+    {
+      "image_id": "xView_1182_5.tif",
+      "small_vehicle_count": 5,
+      "large_vehicle_count": 0
+    },
+    {
+      "image_id": "xView_1268_15.tif",
+      "small_vehicle_count": 0,
+      "large_vehicle_count": 0
+    },
+    {
+      "image_id": "xView_1280_1.tif",
+      "small_vehicle_count": 0,
+      "large_vehicle_count": 0
+    },
+    {
+      "image_id": "xView_136_21.tif",
+      "small_vehicle_count": 4,
+      "large_vehicle_count": 0
+    },
+    {
+      "image_id": "xView_1406_15.tif",
+      "small_vehicle_count": 2,
+      "large_vehicle_count": 0
+    },
+    {
+      "image_id": "xView_1694_8.tif",
+      "small_vehicle_count": 2,
+      "large_vehicle_count": 0
+    },
+    {
+      "image_id": "xView_1694_9.tif",
+      "small_vehicle_count": 2,
+      "large_vehicle_count": 0
+    },
+    {
+      "image_id": "xView_1838_0.tif",
+      "small_vehicle_count": 15,
+      "large_vehicle_count": 0
+    },
+    {
+      "image_id": "xView_1840_17.tif",
+      "small_vehicle_count": 0,
+      "large_vehicle_count": 0
+    },
+    {
+      "image_id": "xView_1910_1.tif",
+      "small_vehicle_count": 0,
+      "large_vehicle_count": 0
+    },
+    {
+      "image_id": "xView_1910_10.tif",
+      "small_vehicle_count": 1,
+      "large_vehicle_count": 0
+    },
+    {
+      "image_id": "xView_1910_24.tif",
+      "small_vehicle_count": 4,
+      "large_vehicle_count": 0
+    },
+    {
+      "image_id": "xView_2012_20.tif",
+      "small_vehicle_count": 3,
+      "large_vehicle_count": 0
+    },
+    {
+      "image_id": "xView_2142_19.tif",
+      "small_vehicle_count": 6,
+      "large_vehicle_count": 0
+    },
+    {
+      "image_id": "xView_2230_15.tif",
+      "small_vehicle_count": 5,
+      "large_vehicle_count": 0
+    },
+    {
+      "image_id": "xView_2318_15.tif",
+      "small_vehicle_count": 0,
+      "large_vehicle_count": 0
+    },
+    {
+      "image_id": "xView_2318_8.tif",
+      "small_vehicle_count": 1,
+      "large_vehicle_count": 0
+    },
+    {
+      "image_id": "xView_2550_27.tif",
+      "small_vehicle_count": 5,
+      "large_vehicle_count": 0
+    }
+  ],
+  "overall_metrics": {
+    "train": {
+      "average_precision": 0.6697576282630835,
+      "average_recall": 0.04853039334023034,
+      "average_mAP50": 0.03727641065924193,
+      "average_mAP50_95": 0.013462994559132966
+    }
+  }
+}

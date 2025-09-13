@@ -1,0 +1,27 @@
+names:
+- building
+- small-vehicle
+- large-vehicle
+- plane
+- locomotive
+- vehicle-lot
+- storage-tank
+- shipping-container-lot
+- tower
+- trailer
+- facility
+- helipad
+- helicopter
+- aircraft-hanger
+- shed
+- damaged-building
+- pylon
+- ship
+- container
+- hut/tent
+- container-crane
+- construction-site
+- railway-vehicle
+nc: 23
+train: /Users/kristjantabakou/Desktop/assesment2/splits/val.txt
+val: /Users/kristjantabakou/Desktop/assesment2/splits/val.txt
