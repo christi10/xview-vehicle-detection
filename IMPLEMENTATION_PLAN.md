@@ -34,7 +34,7 @@ Notes:
 We will add the following structure on top of the existing dataset files:
 
 ```
-assesment2/
+xview-vehicle-detection/
 ├── images/                      # Provided training/validation image tiles (640x640 tif)
 ├── future_pass_images/          # Provided future inference tiles
 ├── annotations.json             # COCO-format annotations (images/annotations/categories)
@@ -78,6 +78,17 @@ assesment2/
 ```
 
 We will create minimal versions of these files first, then iterate.
+
+### Notebook-first workflow (as required)
+
+- Primary execution is via `notebooks/solution.ipynb`.
+- The notebook loads the latest trained weights (or you can train first via CLI), evaluates on the validation split, runs inference on `future_pass_images/`, counts `small-vehicle` and `large-vehicle` per image, and writes `outputs/results.json` in the required schema.
+
+### Submission deliverables
+
+- Executed notebook with all outputs: `notebooks/solution.ipynb`
+- Model weights: best `.pt` from the latest training run (e.g., `outputs/runs/.../weights/best.pt`)
+- JSON results: `outputs/results.json` with the structure described in the README
 
 ## Design Patterns & Conventions
 
