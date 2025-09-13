@@ -38,6 +38,30 @@ The notebook will:
 
 > Tip: If no weights exist yet, use the CLI to create splits and run a quick baseline training (see next section).
 
+### Notebook internals and developer usage
+
+The notebook `notebooks/solution.ipynb` is structured as follows:
+
+- "Environment and imports": resolves `REPO_ROOT` so relative paths work whether you run from `notebooks/` or repo root.
+- "Configuration": reads `configs/train.yaml` and `configs/dataset.yaml` for consistency with the CLI.
+- "Load Trained Model": finds the latest `best.pt` under `outputs/runs/**/weights/best.pt` and loads it with Ultralytics `YOLO`.
+- "Evaluation on Validation Split": builds a minimal dataset YAML that points to `splits/val.txt` and calls `model.val()`; collects precision, recall, mAP50, mAP50–95.
+- "Inference on `future_pass_images/` and Vehicle Counting": runs `model.predict()` on the folder and counts detections for `small-vehicle` and `large-vehicle` by class name.
+- "Build `results.json`": writes `outputs/results.json` in the required submission schema.
+
+Common customizations for developers:
+
+- Change inference folder to test new data:
+  - Edit the cell that defines `future_dir` and set `future_dir = Path('/absolute/path/to/your/images')`.
+- Adjust detection thresholds:
+  - In the predict cell, change `conf=0.25` and `iou=0.45` to your desired values (e.g., lower `conf` for higher recall).
+- Re-train with different hyperparameters:
+  - Edit `configs/train.yaml` (e.g., set `imgsz: 640`, `epochs: 50`, `model: yolov8s`) and re-run training via CLI: `python -m src.cli train`.
+- Use different weights in the notebook:
+  - Skip the auto-discovery and set `model_path = Path('outputs/runs/<your_run>/weights/best.pt')` before `YOLO(model_path)`.
+- Export additional artifacts:
+  - Visual predictions are written under `outputs/vis/infer_nb/`. You can also save the detections table to CSV by adding a small snippet that writes `results_list` to disk if needed.
+
 ## CLI commands (optional but recommended for training)
 
 All commands are exposed via a unified CLI.
@@ -128,13 +152,6 @@ Notes:
 - For faster debugging: reduce `epochs`, use `imgsz: 512`, keep `yolov8n`.
 - For better accuracy: increase `epochs`, `imgsz`, and/or use `yolov8s` or larger, if resources allow.
 
-## Submission packaging
-
-Include the following in the final `.zip`:
-
-- Executed notebook with outputs: `notebooks/solution.ipynb`
-- Model weights: best `.pt` (e.g., `outputs/runs/.../weights/best.pt`) — if required by the submission
-- JSON results: `outputs/results.json`
 
 ## Troubleshooting
 
